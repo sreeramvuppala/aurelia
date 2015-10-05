@@ -1,0 +1,94 @@
+<template>
+<!-- not really sure how to do use this yet to inject template into this one
+     <import from='./../orange-money/orange-money'></import> -->
+<div class="customer-page">
+  <h1 class="voya-heading-1">${heading}</h1>
+  <p>${body}</p>
+  <form submit.delegate="submit()">
+        <div class="row">
+            <div class="columns medium-4">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="First Name" value.bind="fields.firstName" />
+            </div>
+            <div class="columns medium-4">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Last Name" value.bind="fields.lastName" />
+            </div>
+            <div class="columns medium-4">
+                <label for="age">Age</label>
+                <input type="text" id="age" placeholder="Age" value.bind="fields.age" />
+            </div>
+<!--             <div class="columns medium-4">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" placeholder="Phone" value="" />
+                <voya-field
+                  input-name="phone"
+                  label="Phone"
+                  behavior="phone">
+                </voya-field>
+            </div> -->
+            <div class="columns medium-8">
+                <label for="street1">Street 1</label>
+                <input type="text" id="street1" placeholder="Street 1" value.bind="fields.address.street1" />
+            </div>
+            <div class="columns medium-8 end">
+                <label for="street2">Street 2</label>
+                <input type="text" id="street2" placeholder="Street 2" value.bind="fields.address.street2" />
+            </div>
+            <div class="columns medium-4">
+                <label for="city">City</label>
+                <input type="text" id="city" placeholder="City" value.bind="fields.address.city" />
+            </div>
+            <div class="columns medium-4">
+                <label for="state">State</label>
+                <input type="text" id="state" placeholder="State" value.bind="fields.address.state" />
+            </div>
+            <div class="columns medium-4">
+                <label for="zipCode">Zip</label>
+                <input type="text" id="zipCode" placeholder="Zip" value.bind="fields.address.zipCode" />
+            </div>
+
+            <div class="columns small-12">
+                <!-- temporarily using the actual dollar-graph element here -->
+                <div class="orange-money">
+                  <voya-dollar-graph 
+                    id="voya-dollar-graph"
+                    images-base-url="http://www.voya.com/sites/unit.voya.com/modules/custom/voya_orange_money/includes/orange-money-html/images/orange-money/">
+                  </voya-dollar-graph>
+                </div>
+            </div>
+
+<!--             <div class="columns medium-4">
+                <label for="ssn">SSN</label>
+                <input type="text" name="ssn" id="ssn" placeholder="SSN" value="" />
+            </div>
+            <div class="columns medium-4">
+                <label for="date">Date</label>
+                <input type="text" name="date" id="date" placeholder="Date" value="" />
+            </div>
+            <div class="columns medium-4">
+                <label for="dollars">Dollars</label>
+                <input type="text" name="dollars" id="dollars" placeholder="Dollars" value="" />
+            </div>
+            <div class="columns medium-4">
+                <label for="percent">Percent</label>
+                <input type="text" name="percent" id="percent" placeholder="Percent" value="" />
+            </div> -->
+        </div>
+        <div class="buttons-container">
+          <voya-button
+              text="CANCEL"
+              size="large"
+              theme="no-border transparent">
+          </voya-button>
+          <voya-button
+              text="SAVE"
+              size="large"
+              type="submit">
+          </voya-button>
+        </div>
+  </form>
+</div>
+
+
+</template>

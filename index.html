@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head>
+    <title>Aurelia</title>
+    <link rel="stylesheet" href="jspm_packages/npm/font-awesome@4.4.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="dist/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="static/global/js/vendor/ie/html5shiv.js"></script>
+    <!--[if lt IE 9]>
+      <script src="static/global/js/vendor/ie/respond.min.js"></script>
+      <script src="static/global/js/vendor/ie/ie8.js"></script>
+    <![endif]-->
+
+    <script src="static/global/js/vendor/dom4.js"></script>
+    <script src="static/global/js/vendor/document-register-element.js"></script>
+    <script src="static/global/js/vendor/es5-shim.min.js"></script>
+    <script src="static/global/js/vendor/es5-sham.min.js"></script>
+    <script src="static/global/js/vendor/babel-polyfill.js"></script>
+  </head>
+  <body aurelia-app="main">
+    <div class="splash">
+      <div class="message">DEEP UI Reference App</div>
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+
+    <script src="jspm_packages/system.js"></script>
+    <script src="jspm_packages/system-polyfills.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.import('aurelia-bootstrapper');
+    </script>
+  
+
+</body></html>

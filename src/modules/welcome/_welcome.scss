@@ -1,0 +1,12 @@
+.welcome-page {
+
+    margin-bottom:36px;
+    text-align:center;
+
+    .intro {
+        @extend %voya-large-text;
+        max-width:800px;
+        margin:24px auto;
+    }
+
+}

@@ -1,0 +1,45 @@
+<template>
+    <require from="./headingText"></require>
+    <div class="customers-page">
+        <h1 class="voya-heading-1">${heading}</h1>
+        <voya-expand-collapse repeat.for="customer of customers"
+                              theme="secondary teal"
+                              heading-text="${customer.firstName} ${customer.lastName}">
+            <div class="row">
+                <div class="columns medium-4">
+                    ${customer.address.street1}
+                </div>
+                <div class="columns medium-4">
+                    ${customer.address.street2}
+                </div>
+                <div class="columns medium-4">
+                    ${customer.address.city}
+                </div>
+                <div class="columns medium-4">
+                    ${customer.address.state}
+                </div>
+                <div class="columns medium-4">
+                    ${customer.address.zipCode}
+                </div>
+                <div class="columns medium-4">
+                    ${customer.age}
+                </div>
+                <div class="columns medium-4">
+                    ${customer.amazing}
+                </div>
+            </div>
+
+        <!--     ${#each phoneNumbers}
+                <div class="row">
+                    <div class="columns medium-4">
+                        ${type}
+                    </div>
+                    <div class="columns medium-8">
+                        ${phoneNumber}
+                    </div>
+                </div>
+            ${/each} -->
+
+        </voya-expand-collapse>
+    </div>
+</template>

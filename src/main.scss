@@ -1,0 +1,209 @@
+$fa-font-path: '../static/global/fonts/font-awesome/';
+
+//temp fix for compass-mixins: https://github.com/Igosuki/compass-mixins/issues/34
+@function compact($vars...) {
+    $first: nth($vars, 1);
+    $sep: comma;
+    $list: ();
+    @if length($vars) == 1 and type_of($first) == 'list' {
+        $vars: $first;
+        $sep: list-separator($vars);
+    }
+    @each $var in $vars {
+        @if $var {
+            $list: append($list, $var, $sep);
+        }
+    }
+    @return $list;
+}
+
+@import 'jspm:font-awesome/scss/font-awesome';
+
+
+// modules
+@import './modules/orange-money/orange-money';
+@import './modules/welcome/welcome';
+@import './modules/customer/customer';
+@import './modules/customers/customers'; 
+
+html, 
+body {
+  min-height: 100%;
+}
+
+.splash {
+  width:100%;
+  height:100%;
+  text-align:center;
+  font-size:24px;
+  margin-top:10%;
+}
+//
+//TODO: move to base styles or another common repo
+//
+
+.buttons-container {
+  text-align:center;
+  voya-button {
+    margin:24px 12px;
+  }
+}
+body {
+    background: url("../static/myapp/images/bg-image.jpeg") no-repeat center center fixed;
+    background-position: top 0px left 0px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: sans-serif;
+    color: #262626;
+
+    h1, h3, h4{
+        font-family: Proxima;
+        color: #dc650c;
+        &.dark{
+            color: #262626;
+        }
+        margin-top: 0px;
+        padding-top: 10px;
+    }
+    h4 {
+        font-family: Proxima;
+    }
+    .right-padding{
+        padding-right: 20px;
+    }
+    .blue-text{
+        color: #0c81dc;
+    }
+
+    .row-bottom {
+        border-bottom: 1px solid #DBDBDE;
+    }
+    .blog-container, .main-container{
+        width: 1000px;
+        ul{
+            padding:0px 0px 0px 20px;
+        }
+    }
+    .blog-container {
+        background-color: #F0F0F0;
+    }
+
+    .main-container {
+        background-color: #fff;
+    }
+    .jtg-bottom{
+        background-color: #414042;
+        color: #efefef;
+        font-size:9px;
+        padding: 5px 0px;
+        ul{
+            padding:0px;
+            li{
+                display: inline;
+                list-style-type: none;
+                padding: 0px 20px;
+                border-right: 1px solid #DBDBDE;
+            }
+            li:first-child{
+                padding-left: 0px;
+                padding-right: 20px;
+                border-right: 1px solid #DBDBDE;
+            }
+            li:last-child{
+                padding-left: 20px;
+                border-right: none;
+            }
+        }
+    }
+
+    .col-bottom{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.navbar{
+    min-height: 0px;
+    margin-bottom: 0px;
+}
+.navbar.center .navbar-inner {
+    text-align: center;
+}
+.navbar.center .navbar-inner .nav {
+    float: none;
+    display:inline-block;
+}
+
+
+.jtg-nav {
+    margin-top:5px;
+    li{
+        a{
+            padding: 0px 80px;
+        }
+    }
+}
+
+.nav-col-padding{
+    padding-left: 160px;
+}
+.vcenter {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.sprite {
+    background-image: url(../static/myapp/images/spritesheet.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.sprite-career-icon {
+    width: 24px;
+    height: 30px;
+    background-position: -5px -5px;
+}
+
+.sprite-find-job {
+    width: 23px;
+    height: 31px;
+    background-position: -39px -5px;
+}
+
+.sprite-find-talent {
+    width: 31px;
+    height: 30px;
+    background-position: -72px -5px;
+}
+
+.sprite-resource {
+    width: 22px;
+    height: 30px;
+    background-position: -5px -45px;
+}
+
+.talent-container{
+    padding: 0px 10px 20px 10px;
+    margin: 0px 0px 0px 10px;
+    border-right: 1px solid #DBDBDE;
+}
+
+.first-container {
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0px 0px 20px;
+}
+
+.col-padding {
+    padding-top: 10px;
+}
+
+.col-blog{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-right: 2px dotted #DBDBDE;
+    min-height: 190px;
+}
+
+
